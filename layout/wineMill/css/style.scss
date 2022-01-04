@@ -1,0 +1,1070 @@
+@import "variables";
+@import "mixins";
+
+.wrapper {
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+    min-height: 100%;
+}
+.content {
+    flex:  1 1 auto;
+}
+.container {
+    max-width: 1290px;
+    margin: 0 auto;
+
+    @include media(1249px) {
+        width: $lg;
+    }
+    @include media(1150px) {
+        width: $md;
+    }
+    @include media(970px) {
+        width: $sm;
+    }
+    @include media(720px) {
+        width: $xs;        
+    }
+   
+}
+.container_background {
+    background: $container;
+}
+.header {
+    width: 100%;
+    background: $header;
+    border-bottom: 1px solid $black;
+        & p {
+            color: $while;
+        }
+		&__title {
+            display: flex;
+            justify-content: center;
+            width: 100%;
+            margin: 0 0 24px 0;
+            padding-top: 7px;
+            & p {
+                width: 431px;
+                font-family: $ff_int;
+                font-weight: 700;
+                font-size: $fz7;
+                color: $while;
+                line-height: 8px;
+                letter-spacing: 3px;
+                @include media(720px) {
+                    width: 220px;
+                }
+            }
+            & span {
+                text-decoration: underline;
+                font-size: $fz8;
+                line-height: 9px;
+            }
+		}
+
+		&__row {
+            display: flex;
+            justify-content: space-between;
+            margin: 0 0 15px 0;
+            padding: 0 45px;
+            @include media(720px) {
+                flex-wrap: wrap;
+            }
+		}
+
+		&__row-item {
+            display: flex;
+            & .logo-text {
+                width: 193px;
+                color: $while;
+                font-family: $ff_fd;
+                font-weight: 600;
+                font-size: $fz24;
+                line-height: 28px;
+                margin: 8px 0 0 10px;
+
+                @include media(1150px) {
+                    font-size: $fz18;
+                }
+            }
+            & input {
+                width: 557px - 38px;
+                height: 34px;
+                padding: 10px;
+                font-size: $fz14;
+                @include media(1150px) {
+                    width: 310px;
+                }
+                @include media(720px) {
+                    width: 217px;
+                    margin-bottom: 10px;
+                }
+            }
+            & button {
+                background-color: $red;
+                width: 38px;
+                height: 34px;
+                padding: 11px 13px;
+                @include media(1150px) {
+                    margin-right: 15px;
+                }
+            }
+            & .gray_text {
+                color: $while_gray;
+                opacity: 0.65;
+                font-weight: 500;
+                font-family: $ff_int;
+                font-size: $fz9;
+                line-height: 11px;
+            }
+            & .mosk {
+                padding: 0 0 0 16px;
+                background: url(../img/vec.png) 0 0 no-repeat;
+            }
+		}
+
+		&__container-logo {
+            display: flex;
+            & img {
+                height: 26px;
+            }
+            @include media(970px) {
+                display: none;
+            }
+		}
+
+		&__row-registrasio {
+            display: flex;
+            flex-direction: column;
+            @include media(1150px) {
+                width: 106px;
+            }
+		}
+
+            .header__row-registrasio-item .lich_kab {
+                color: $while;
+                font-weight: 500;
+                font-family: $ff_int;
+                font-size: $fz12;
+                line-height: 15px;
+                margin: 2px 0 0 0;
+            }
+            & .summa {
+                color: $while;
+                font-weight: 500;
+                font-family: $ff_int;
+                font-size: $fz12;
+                line-height: 15px;
+                margin: 2px 0 0 0;
+            }
+            & .tel {
+                color: $while;
+                font-weight: 500;
+                font-family: $ff_int;
+                font-size: $fz12;
+                line-height: 15px;
+                margin: 2px 0 0 0;
+            }
+		
+
+		&__reg-vih {
+            display: flex;
+            justify-content: space-between;
+		}
+        & .bascket {
+            margin: 0 0 0 60px;
+            @include media(1150px) {
+                margin: 0 0 0 30px;
+            }
+        }
+        & .city {
+            margin: 0 0 0 60px;
+            @include media(1150px) {
+                margin: 0 0 0 30px;
+            }
+        }
+}
+
+/* nav */
+
+.container_background {
+    max-width: 1290px;
+    padding: 0 45px;
+    margin: 0 auto;
+}
+.list_nav {
+    display: flex;
+    justify-content: flex-start;
+    @include media(970px) {
+        flex-wrap: wrap;
+    }
+    @include media(720px) {
+        display: block;  
+        padding: 10px 0 10px 0;      
+    }
+    }
+.list_nav-item {
+    font-family: $ff_int;
+    font-weight: 500;
+    font-size: $fz12;
+    line-height: 15px;
+    color: $while;
+    margin: 6px 40px 11px 0;
+}
+.list_nav-item:last-child {
+    margin: 6px 0 11px 0;
+}
+.list_nav-link {
+    color: $while;
+}
+.list_nav-item:hover {
+    transform: scale(1.5);
+    transition: 0.5s;
+}
+.list_nav-link:hover {
+    color: $red;
+    transition: 0.5s;
+}
+
+/* banner */ 
+
+.banner {
+    background: $black;
+    &_container {
+        background: url(../img/главный\ баннер\ для\ обложки.jpg) center;
+        background-size: 1235px;
+        max-width: 1200px;
+        height: 270px;
+        margin-bottom: 5px;
+    }
+    .container_banner {
+        padding-top: 28px;
+    }
+}
+.glavn_banner {
+    width: 100%;
+}
+.banner-row {
+    display: flex;
+    justify-content: space-between;
+    padding-bottom: 30px;
+    @include media(720px) {
+        flex-direction: column;    
+    }
+    &_text {
+        font-family: $ff_int;
+        font-weight: 500;
+        font-size: $fz12;
+        line-height: 15px;
+        color: $while;
+        text-align: center;
+        letter-spacing: 2px;
+    }
+
+    &_title {
+        font-family: $ff_int;
+        font-weight: 600;
+        font-size: $fz21;
+        line-height: 25px;
+        color: $while;
+        text-align: center;
+        letter-spacing: 1px;
+    }
+}
+.banner-row-item {
+    width: 427px;
+    height: 120px;
+    margin-right: 5px;
+    padding-top: 37px;
+    margin-bottom: 7px;
+    @include media(720px) {
+       width: 230px;     
+    }
+}
+
+.banner-row-item:nth-child(1) {
+    background: url(../img/image\ 4.jpg);
+}
+.banner-row-item:nth-child(2) {
+    background: url(../img/Rectangle\ 5.jpg);
+}
+.banner-row-item:nth-child(3) {
+    background: url(../img/Rectangle\ 6.jpg);
+    margin-right: 0;
+}
+.banner-row-item:hover {
+    transform: scale(1.2);
+    transition: 0.5s;
+}
+
+/* footer */ 
+
+.footer {
+    width: 100%;
+    background: $black;
+}
+.footer-one {
+    display: flex;
+    margin-bottom: 40px;
+    @include media(720px) {
+       flex-direction: column;
+    }
+
+}
+.footer-row {
+    padding: 67px 0 22px 0;
+}
+.footer-list {
+    @include media(720px) {
+       margin-bottom: 40px;    
+    }
+}
+.footer-list:first-child {
+    margin-right: 210px;
+}
+.footer-list:nth-child(2) {
+    margin-right: 79px;
+}
+.footer-list:nth-child(3) {
+    margin-right: 61px;
+}
+.footer-list-item {
+    color: $while;
+    font-family: $ff_int;
+    font-weight: 500;
+    font-size: $fz12;
+    margin-bottom: 8px;
+
+}
+.footer-list-item:last-child {
+    margin-bottom: 0;
+
+}
+.footer-list-item:first-child {
+    color: $while;
+    margin-bottom: 19px;
+    font-family: $ff_int;
+    font-weight: 700;
+    font-size: $fz12;
+}
+.footer-two {
+    display: flex;
+    @include media(720px) {
+      flex-direction: column;      
+    }
+}
+.footer-two-text {
+    margin-right: 205px;
+    color: $while;
+    font-family: $ff_int;
+    font-weight: 700;
+    font-size: $fz12;
+    @include media(720px) {
+        margin-bottom: 10px;     
+    }
+}
+.footer-two-text:last-child {
+    margin-right: 0;
+}
+
+/* forma end */ 
+
+.form-end {
+    background: $black;
+
+    &_feedbek {
+        padding: 31px 0 31px 45px;
+    }
+
+    &_feedbek-title {
+        color: $while;
+        font-family: $ff_int;
+        font-weight: 700;
+        font-size: $fz11;
+        line-height: 20px;
+        letter-spacing: 1px;
+        margin-bottom: 19px;
+    }
+
+    &_feedbek-email {
+        color: $line;
+        font-family: $ff_rob;
+        font-size: $fz9;
+        line-height: 20px;
+        letter-spacing: 1px;
+        margin-bottom: 9px;
+    }
+
+    &_feedbek-form {
+        display: flex;
+        flex-direction: column;
+    }
+
+    &_feedbek-input {
+        width: 393px;
+        height: 36px;
+        margin-bottom: 34px;
+        padding: 5px 10px;
+        font-family: $ff_int;
+        font-weight: 700;
+        font-size: $fz11;
+        line-height: 13px;
+        letter-spacing: 1px;
+        @include media(720px) {
+            width: 150px;       
+        }
+    }
+    .footer-end_btn {
+        width: 188px;
+        height: 33px;
+        margin-bottom: 50px;
+        background: $red;
+        font-family: $ff_int;
+        font-weight: 700;
+        font-size: $fz11;
+        line-height: 13px;
+        letter-spacing: 1px;
+        color: $while;
+        @include media(720px) {
+            width: 150px;     
+        }
+    }
+    .footer-end_btn:hover {
+        transform: scale(1.2);
+        transition: 0.5s;
+    }
+}
+
+.form-end-back {
+    width: 100%;
+    background: url(../img/form_vino.jpg) top right no-repeat,
+                $black;
+}
+.form-end_feedbek-img {
+    margin-right: 83px;
+    @include media(720px) {
+        margin-right: 50px;     
+    }
+}
+.form-end_feedbek-img:hover {
+    transform: scale(2);
+    transition: 0.2s;
+}
+
+/* help */ 
+
+.help {
+    width: 100%;
+    background: $black;
+}
+.help-banner {
+    display: flex;
+    justify-content: flex-end;
+    padding: 43px 0 43px 0;
+    background: url(../img/help_red.png) top -10px right -93px no-repeat,
+                url(../img/help_piple.png) top left no-repeat;
+    margin-bottom: 50px;            
+}
+.help-banner-item {
+    flex: 0 1 (540px + 71px + 71px);
+}
+.help-title {
+    font-family: $ff_ab;
+    font-family: 400;
+    font-size: normal;
+    font-size: $fz48;
+    line-height: 60px;
+    color: $while;
+    text-align: center;
+    padding-bottom: 3px;
+    @include media(720px) {
+        font-size: $fz18;
+        line-height: 20px;       
+    }
+}
+.help-subtitle {
+    font-family: $ff_int;
+    font-weight: 500;
+    font-size: $fz38;
+    line-height: 46px;
+    letter-spacing: 1px;
+    color: $while;
+    text-align: center;
+    padding-bottom: 33px;
+    @include media(720px) {
+        font-size: $fz18; 
+        line-height: 20px;      
+    }
+}
+.help-text {
+    font-family: $ff_int;
+    font-weight: 800;
+    font-size: $fz11;
+    line-height: 13px;
+    letter-spacing: 3px;
+    color: $while;
+    text-align: center;
+    @include media(720px) {
+        font-size: $fz18;
+        line-height: 20px;       
+    }
+}
+.help-row {
+    display: flex;
+    justify-content: space-between;
+}
+.help-row-item {
+    color: $while;
+    font-family: $ff_int;
+    font-weight: 400;
+    font-size: $fz12;
+    line-height: 25px;
+    margin-bottom: 50px;
+    @include media(720px) {
+        font-size: $fz9;    
+        margin-right: 10px;
+    }
+}
+.help-row-item:first-child {
+    width: 486px;
+}
+.help-row-item:last-child {
+    width: 521px;
+}
+.help-link_text {
+    padding-bottom: 125px;
+    font-family: $ff_int;
+    font-weight: 800;
+    font-size: $fz11;
+    line-height: 13px;
+    letter-spacing: 3px;
+    color: $while;
+}
+.help-link {
+    color: $while;
+}
+
+.help-link::after {
+    content: '';
+    width: 46px;
+    height: 1px;
+    background: $while;
+    display: inline-block;
+    margin: 0 0 4px 27px;
+}
+
+/* main */ 
+
+.main {
+    width: 100%;
+    background: $black;
+}
+
+.main-row {
+    display: flex;
+    justify-content: space-between;
+    padding-top: 46px;
+    @include media(720px) {
+        flex-direction: column;    
+    }
+}
+.main_form {
+    width: 229px;
+    @include media(970px) {
+        width: 170px;    
+    }
+    @include media(720px) {
+        align-self: center;        
+    }
+}
+.main_form-column {
+    display: flex;
+    flex-direction: column;
+}
+.main-form_one {
+    margin-bottom: 75px;
+}
+.main_one-two {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 9px;
+}
+.main_one-two:first-child {
+    border-bottom: 1px solid $while;
+}
+.main_one-two:last-child {
+    margin-bottom: 0;
+}
+.main_one-btn {
+    background: url(../img/main_btn.png) center center no-repeat,
+                $red;
+    width: 28px;
+    height: 28px;
+    margin-bottom: 10px;
+}
+
+.main_one-color, .one-two {
+    font-family: $ff_rob;
+    font-weight: 500;
+    font-size: $fz12;
+    line-height: 20px;
+    color: $while;
+}
+.one-two {
+    vertical-align: 4px;
+    padding-left: 15px;
+}
+.main-wrap {
+    display: flex;
+    & input {
+        width: 18px;
+        height: 18px;
+        opacity: 0;
+    }
+    & input:checked {
+        width: 18px;
+        height: 18px;
+        opacity: 1;
+    }
+    
+}
+.soth_set {
+    @include media(720px) {
+       display: flex;
+    }
+}
+.main_one-number {
+    font-family: $ff_rob;
+    font-weight: 500;
+    font-size: $fz9;
+    line-height: 18px;
+    letter-spacing: 1px;
+    color: $while;
+    opacity: 0.5;
+}
+.q {
+    border: 1px solid $while;
+    width: 18px;
+    height: 18px;
+}
+
+
+
+.main-form-two {
+    display: flex;
+    justify-content: space-between;
+    border-bottom: 1px solid $while;
+    padding-bottom: 10px;
+    margin-bottom: 10px;
+    }
+.form-two-text {
+    color: $while;
+    font-family: $ff_rob;
+    font-weight: 500;
+    font-size: $fz12;
+    line-height: 20px;
+}
+.main_two-btn {
+    background: url(../img/main_btn.png) center center no-repeat,
+                $red;
+    width: 28px;
+    height: 28px;
+}
+.main-form-input {
+    background: transparent;
+    width: 76px;
+    height: 32px;
+    padding: 7px 23px 5px 11px;
+    border-top: 1px solid $while;
+    border-left: 1px solid $while;
+    border-right: 1px solid $while;
+    border-bottom: 1px solid $while;
+    font-family: $ff_int;
+    font-weight: 700;
+    font-size: $fz9;
+    line-height: 18px;
+    letter-spacing: 1px;
+    color: $while;
+    @include media(970px) {
+        width: 70px;    
+    }
+}
+.main-form-input:first-child {
+    border-right: 0;
+}
+.main-form-input:nth-child(2) {
+    border-left: 0;
+}
+.form-two-block {
+    padding-bottom: 76px;
+}
+.form-two-row {
+    display: flex;
+    justify-content: flex-start;
+}
+.form-two-row-btn {
+    position: relative;
+    width: 76px;
+    height: 32px;
+    background-color: $red;
+    font-family: $ff_int;
+    font-weight: 600;
+    font-size: $fz11;
+    line-height: 18px;
+    letter-spacing: 1px;
+    color: $while;
+}
+.form-two-row-btn::before {
+    content: '';
+    position: absolute;
+    width: 1px;
+    height: 16px;
+    background-color: $while;
+    left: -94px;
+    top: 8px;
+    @include media(970px) {
+        left: -75px;      
+    }
+}
+.main-form-three {
+    padding-bottom: 50px;
+}
+.main-form-three-row {
+    display: flex;
+    justify-content: space-between;
+    padding-top: 25px;
+    padding-bottom: 10px;
+    border-bottom: 1px solid $while;
+}
+.main-form-three-row:first-child {
+    padding-top: 0;
+}
+.form-three-text {
+    font-family: $ff_rob;
+    font-weight: 500;
+    font-size: $fz12;
+    line-height: 20px;
+    color: $while;
+    padding-top: 7px;
+}
+
+.gorm-three-bnt {
+    width: 28px;
+    height: 27px;
+    background: url(../img/plus.png) center center no-repeat,
+                $red;
+}
+
+
+/* content */ 
+
+.main-select-text, .main-select-item {
+    font-family: $ff_rob;
+    font-weight: 500;
+    font-size: $fz12;
+    line-height: 20px;
+    color: $while;
+}
+.main-select-text {
+    @include media(970px) {
+      margin-bottom: 10px;          
+    }
+}
+
+.main-select-row {
+    display: flex;
+    justify-content: space-between;
+    width: 877px;
+    padding-bottom: 114px;
+
+    @include media(1249px) {
+        width: 800px;
+    }
+    @include media(1150px) {
+        width: 620px;
+    }
+    @include media(970px) {
+        flex-wrap: wrap;   
+        width: 440px;  
+    }
+    @include media(720px) {
+        flex-direction: column;     
+        align-items: center;
+        width: 230px;   
+    }
+}
+.main_content {
+    @include media(1249px) {
+       padding-left: 15px;
+    }
+}
+.main-select-text::after {
+    content: '';
+    background: url(../img/triangle.png);
+    display: inline-block;
+    width: 6px;
+    height: 5px;
+    margin-left: 10px;
+}
+.main-select-list {
+    display: flex;
+    @include media(720px) {
+        flex-direction: column;     
+    }
+}
+.main-select-item {
+}
+
+.main-select-item:last-child {
+    opacity: 0.5;
+}
+.main-select-item:nth-child(1) {
+    margin-right: 40px;
+    width: 57px;
+    background: url(../img/down.png) top 7px right 15px no-repeat,
+                url(../img/up.png) top 7px right 12px no-repeat,
+                url(../img/triangle.png) top 7px right no-repeat;
+    @include media(1150px) {
+        margin-right: 20px;
+    }
+    @include media(970px) {
+        margin-right: 10px;          
+    }
+}
+.main-select-item:nth-child(2) {
+    margin-right: 40px;
+    @include media(1150px) {
+        margin-right: 11px;
+    }
+}
+.main-select-item:nth-child(2)::after {
+    content: '';
+    background: url(../img/triangle.png);
+    display: inline-block;
+    width: 6px;
+    height: 5px;
+    margin-left: 10px;
+    @include media(970px) {
+        margin-left: 6px;            
+    }
+}
+.main-select-item:nth-child(3) {
+    margin-right: 63px;
+    width: 70px;
+    background: url(../img/down.png) top 7px right 15px no-repeat,
+                url(../img/up.png) top 7px right 12px no-repeat,
+                url(../img/triangle.png) top 7px right no-repeat;
+    @include media(1150px) {
+        margin-right: 15px;
+    }
+}
+.main-select-item:nth-child(4) {
+    margin-right: 22px;
+    @include media(970px) {
+            margin-right: 8px;
+    }
+}
+.main-select-item:nth-child(4)::after {
+    content: '';
+    background: url(../img/circle.png);
+    display: inline-block;
+    width: 5px;
+    height: 5px;
+    margin-left: 20px;
+    border-radius: 50%;
+    vertical-align: 1px;
+}
+
+/* menu */
+
+.main-menu-row {
+}
+.main-row-item {
+    width: 238px;
+    @include media(1150px) {
+        width: 200px;
+    }
+    @include media(970px) {
+        width: 135px;          
+    }
+}
+.main-row-background {
+    height: 297px;
+    background: $header;
+    position: relative;
+    margin-bottom: 20px;
+}
+.main-row-background::after {
+    content: '';
+    width: 2px;
+    height: 40px;
+    background-color: $red;
+    display: block;
+    margin-left: 236px;
+    @include media(1150px) {
+        margin-left: 198px;
+    }
+    @include media(720px) {
+       margin-left: 133px;  
+    }
+}
+.main-row-background-img {
+    position: absolute;
+    top: -52px;
+    left: 69px;
+    @include media(1150px) {
+        left: 55px;
+    }
+    @include media(970px) {
+        left: 18px;           
+    }
+}
+.main-row-title {
+    font-family: $ff_int;
+    font-weight: 600;
+    font-size: $fz12;
+    width: 94px;
+    height: 22px;
+    letter-spacing: 1px;
+    color: $while;
+    margin-bottom: 21px;
+    @include media(970px) {
+        margin-bottom: 10px;       
+    }
+}
+.main-row-subtitle {
+    font-family: $ff_int;
+    font-weight: 600;
+    font-size: $fz7;
+    line-height: 14px;
+    letter-spacing: 1px;
+    color: $while;
+    margin-bottom: 9px;
+}
+.main-contri {
+    display: flex;
+    margin-bottom: 6px;
+    
+}
+.main-contri-img {
+    width: 14px;
+    height: 6px;
+}
+.main-contri-text {
+    font-family: $ff_int;
+    font-weight: 600;
+    font-size: $fz7;
+    line-height: 14px;
+    letter-spacing: 1px;
+    color: $while;
+    margin-top: -4px;
+    padding-left: 11px;
+}
+.cena-row {
+    display: flex;
+    justify-content: space-between;
+    @include media(970px) {
+        flex-direction: column;
+    }
+    @include media(720px) {
+       margin-bottom: 90px;   
+    }
+}
+.cena-block {
+    display: flex;
+    flex-direction: column;
+    @include media(970px) {
+        margin-bottom: 10px;  
+    }
+}
+.cena-block-title {
+    font-family: $ff_int;
+    font-weight: 700;
+    font-size: $fz6;
+    line-height: 14px;
+    letter-spacing: 3px;
+    color: $while;
+    opacity: 0.35;
+}
+.cena-block-subtitle {
+    font-family: $ff_int;
+    font-weight: 700;
+    font-size: $fz11;
+    line-height: 14px;
+    letter-spacing: 3px;
+    color: $while;
+}
+.cena-btn {
+    width: 105px;
+    height: 28px;
+    font-family: $ff_int;
+    font-weight: 800;
+    font-size: $fz8;
+    line-height: 10px;
+    letter-spacing: 3px;
+    text-align: center;
+    color: $while;
+    background-color: $red;
+    @include media(1150px) {
+        width: 90px;
+    }
+    @include media(970px) {
+        width: 100%;        
+    }
+}
+.main-menu-row-three {
+    display: flex;
+    justify-content: space-between;
+    width: 877px;
+    margin-bottom: 157px;
+    @include media(1249px) {
+        width: 800px;
+    }
+    @include media(1150px) {
+        width: 620px;
+    }
+    @include media(970px) {
+        width: 440px;          
+    }
+    @include media(720px) {
+        flex-direction: column;       
+        align-items: center; 
+        width: 230px;
+        margin-bottom: 10px;
+    }
+}
+.main-menu-row-three:last-child {
+    margin-bottom: 75px;
+    @include media(1150px) {
+        margin-bottom: 100px;
+    }
+    @include media(720px) {
+        margin-bottom: 10px;     
+    }
+}
+
+/* main link */ 
+
+.main-link {
+    margin-bottom: 125px;
+}
+.main-link-text {
+    position: relative;
+    font-family: $ff_int;
+    font-weight: 800;
+    font-size: $fz11;
+    line-height: 13px;
+    letter-spacing: 4px;
+    color: $while;
+}
+.main-link-text::after {
+    content: '';
+    position: absolute;
+    width: 46px;
+    height: 1px;
+    background-color: $while;
+    display: inline-block;
+    top: 5px;
+    left: 177px;
+}

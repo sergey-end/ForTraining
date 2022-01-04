@@ -1,0 +1,7 @@
+{
+"version": 3,
+"mappings": "AAAA,aAAa;AAWb,mBAAmB;AAOnB,iBAAiB;AAajB,iBAAiB",
+"sources": ["variables.scss"],
+"names": [],
+"file": "variables.css"
+}
